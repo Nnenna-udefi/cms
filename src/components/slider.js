@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
-import rightPeople from './images/right-people.png';
-import conservImg from './images/conservations.png';
-import upToDate from './images/upToDate.png';
+import rightPeople from '../images/right-people.png';
+import conservImg from '../images/conservations.png';
+import upToDate from '../images/upToDate.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.css';

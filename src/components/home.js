@@ -1,73 +1,15 @@
 import React from 'react';
-import logo from './images/linkedin-logo.png';
-import people from './images/people-logo.png';
-import learning from './images/learning-logo.png';
-import articles from './images/articles-logo.png';
-import jobLogo from './images/job-brief.png';
-import ImageWithCaption from './captionImage';
-import heroImage from './images/hero2.jpeg'
-import skills from './images/skills-img.svg';
-import connect from './images/connect-img.svg';
+import skills from '../images/skills-img.svg';
+import connect from '../images/connect-img.svg';
 import FeatureSlider from './slider';
-import who from './images/who-linkedin.jpeg';
+import who from '../images/who-linkedin.jpeg';
+import Footer from './footer';
+import Header from './header';
+
 const Home = () => {
     return (
         <div >
-            <header className='mx-3 md:mx-16'>
-                <nav className='flex justify-between items-center mt-2'>
-                    <img src={logo} alt='Linked in logo' className='w-32' />
-                    <div className='flex items-center'>
-                        <div className='hidden md:flex'>
-                            <ImageWithCaption
-                                imageUrl={articles}
-                                captionText="Articles"
-                            />
-
-                            <ImageWithCaption
-                                imageUrl={people}
-                                captionText="People"
-                            />
-                            <ImageWithCaption
-                                imageUrl={learning}
-                                captionText="Learning"
-                            />
-                            <ImageWithCaption
-                                imageUrl={jobLogo} 
-                                captionText="Jobs"
-                            />
-                        </div>
-                        
-                        <div className='border-l-2 border-gray-500 pl-2'>
-                            <a href='/' className='ml-3 mr-2  font-bold'>Join Now</a>
-                            <button className='border border-blue-900 font-bold py-4 px-6 rounded-full ml-3 cursor-pointer text-blue-900'>Sign In</button>
-                        </div>
-                    </div>
-                </nav>
-                <section className='md:flex mt-3'>
-                    <div>
-                        <div className='my-10'>
-                            <h1 className='md:text-6xl text-3xl font-light  text-red-700'>Welcome to your professional community</h1>
-                        </div>
-                        <form>
-                            <label htmlFor='email' className='mt-4'>Email or phone</label><br />
-                            <input type='text' name='email' className='w-full mt-2 mb-6 md:w-7/12 border border-black p-4 rounded' /><br />
-                            <label htmlFor='password'>Password</label><br />
-                            <input type='password' className='w-full my-2 md:w-7/12 border border-black p-4 rounded' /><br />
-                            <a href='/'>Forgot password?</a><br />
-                            <button type='submit' className='w-full font-bold md:w-7/12 p-4 rounded-full border-black text-white bg-blue-600 my-2 cursor-pointer'>Sign in</button>
-                            
-                        </form>
-                            <div className='flex items-center my-6'>
-                                <hr className='md:w-1/4 w-1/2 text-black font-bold'/><span className='mx-2'>or</span><hr className='md:w-1/4 font-bold w-1/2 text-black'/>
-                            </div>
-                            <p className='md:w-7/12 my-2 md:text-left text-center text-xs'>By clicking Continue, you agree to Linkedin's <a href='/' className='text-blue-600 font-bold'>User Agreement, Privacy Policy</a>, and <a href='/' className='text-blue-600 font-bold'>Cookie Policy.</a></p>
-                            <button className='border-2 my-4 w-full md:w-7/12 p-4 rounded-full border-black cursor-pointer'>New to LinkedIn? Join now</button>
-                    </div>
-                    <div className='mt-20'>
-                        <img src={heroImage} alt='someone learning on his laptop' />
-                    </div>
-                </section>
-            </header>
+            <Header />
 
             <main>
                 <section className='bg-orange-50 px-6 py-14 md:px-16 md:flex'>
@@ -146,14 +88,16 @@ const Home = () => {
                     <div>
                         <img src={skills} alt='Learn a skill' className='w-1/2 mb-6 mt-8 md:mt-0' />
                         <h3 className='text-4xl font-light mb-4'>Learn the skills you need to succeed</h3>
+
                         <select name='skills' className='border bg-white p-4 border-black text-xl w-3/4'>
-                            <option disabled selected>Choose a topic to learn about</option>
-                            <option className='mx-2'>Business analysis and strategy</option>
-                            <option>Career Development</option>
-                            <option>Customer Service</option>
-                            <option>Human Resources</option>
-                            <option>Finance and Accounting</option>
+                            <option disabled selected className='text-gray-600'>Choose a topic to learn about</option>
+                            <option className='text-gray-600 bg-white hover:bg-gray-200'>Business analysis and strategy</option>
+                            <option className='text-gray-600 bg-white hover:bg-gray-200'>Career Development</option>
+                            <option className='text-gray-600 bg-white hover:bg-gray-200'>Customer Service</option>
+                            <option className='text-gray-600 bg-white hover:bg-gray-200'>Human Resources</option>
+                            <option className='text-gray-600 bg-white hover:bg-gray-200'>Finance and Accounting</option>
                         </select>
+
                     </div>
                 </section>
 
@@ -180,76 +124,8 @@ const Home = () => {
                 </section>
             </main>
 
-            <footer>
-               <div className='bg-orange-50 p-6 md:px-14 md:flex flex-wrap justify-between'>
-               <p className='text-blue-800 font-bold text-lg mb-6'>Linked<span className='bg-blue-800 text-white m-1'>in</span></p>
-                    <div>
-                        <h4 className='font-bold my-2'>General</h4>
-                        <p className='py-1 text-sm text-gray-600'>Sign Up</p>
-                        <p className='py-1 text-sm text-gray-600'>Help Center</p>
-                        <p className='py-1 text-sm text-gray-600'>About</p>
-                        <p className='py-1 text-sm text-gray-600'>Press</p>
-                        <p className='py-1 text-sm text-gray-600'>Blog</p>
-                        <p className='py-1 text-sm text-gray-600'>Careers</p>
-                        <p className='py-1 text-sm text-gray-600'>Developers</p>
-                    </div>
-                <div>
-                    <h4 className='font-bold my-2'>Browse LinkedIn</h4>
-                    <p className='py-1 text-sm text-gray-600'>Learning</p>
-                    <p className='py-1 text-sm text-gray-600'>Jobs</p>
-                    <p className='py-1 text-sm text-gray-600'>Salary</p>
-                    <p className='py-1 text-sm text-gray-600'>Mobile</p>
-                    <p className='py-1 text-sm text-gray-600'>Services</p>
-                    <p className='py-1 text-sm text-gray-600'>Products</p>
-                    <p className='py-1 text-sm text-gray-600'>Top Companies Hub</p>
-                </div>
-
-                <div>
-                <h4 className='font-bold my-2'>Business Solutions</h4>
-                    <p className='py-1 text-sm text-gray-600'>Talent</p>
-                    <p className='py-1 text-sm text-gray-600'>Marketing</p>
-                    <p className='py-1 text-sm text-gray-600'>Sales</p>
-                    <p className='py-1 text-sm text-gray-600'>Learning</p>
-                </div>
-
-                <div>
-                <h4 className='font-bold my-2'>Directories</h4>
-                    <p className='py-1 text-sm text-gray-600'>Members</p>
-                    <p className='py-1 text-sm text-gray-600'>Jobs</p>
-                    <p className='py-1 text-sm text-gray-600'>Companies</p>
-                    <p className='py-1 text-sm text-gray-600'>Featured</p>
-                    <p className='py-1 text-sm text-gray-600'>Learning</p>
-                    <p className='py-1 text-sm text-gray-600'>Posts</p>
-                    <p className='py-1 text-sm text-gray-600'>Articles</p>
-                    <p className='py-1 text-sm text-gray-600'>Schools</p>
-                    <p className='py-1 text-sm text-gray-600'>News</p>
-                    <p className='py-1 text-sm text-gray-600'>News Letters</p>
-                    <p className='py-1 text-sm text-gray-600'>Services</p>
-                    <p className='py-1 text-sm text-gray-600'>Products</p>
-                    <p className='py-1 text-sm text-gray-600'>Advice</p>
-                    <p className='py-1 text-sm text-gray-600'>People Search</p>
-                </div>
-               </div>
-
-               <div className='p-6 md:px-14 text-gray-600 md:flex md:flex-wrap '>
-            
-                    <div className='flex items-center md:py-0'>
-                        <p className='text-black font-bold text-xs'>Linked<span className='bg-black text-white'>in</span></p>
-                        <p className='text-xs ml-2'>© 2023</p>
-                    </div>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>Accessibility</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>Privacy Policy</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>Copyright Policy</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>Guest Controls</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>About</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>User Agreement</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>Cookie Policy</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>Brand Policy</p>
-                    <p className='text-xs py-2 md:py-0 md:px-3'>Community Guidelines</p>
-              
-               </div>
-            </footer>
-            
+            <Footer />
+             
         </div>
     );
 };
