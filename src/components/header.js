@@ -6,6 +6,7 @@ import articles from '../images/articles-logo.png';
 import jobLogo from '../images/job-brief.png';
 import ImageWithCaption from './captionImage';
 import heroImage from '../images/hero2.jpeg'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -35,7 +36,9 @@ const Header = () => {
                         
                         <div className='border-l-2 border-gray-500 pl-2'>
                             <a href='/' className='ml-3 mr-2  font-bold'>Join Now</a>
-                            <button className='border border-blue-900 font-bold py-4 px-6 rounded-full ml-3 cursor-pointer text-blue-900'>Sign In</button>
+                            <Link to='/feed'>
+                                <button className='border border-blue-900 font-bold py-4 px-6 rounded-full ml-3 cursor-pointer text-blue-900'>Sign In</button>
+                            </Link>
                         </div>
                     </div>
                 </nav>
@@ -50,7 +53,9 @@ const Header = () => {
                             <label htmlFor='password'>Password</label><br />
                             <input type='password' className='w-full my-2 md:w-7/12 border border-black p-4 rounded' /><br />
                             <a href='/'>Forgot password?</a><br />
-                            <button type='submit' className='w-full font-bold md:w-7/12 p-4 rounded-full border-black text-white bg-blue-600 my-2 cursor-pointer'>Sign in</button>
+                            <Link to='/feed'>
+                                <button type='submit' className='w-full font-bold md:w-7/12 p-4 rounded-full border-black text-white bg-blue-600 my-2 cursor-pointer'>Sign in</button>
+                            </Link>
                             
                         </form>
                             <div className='flex items-center my-6'>
